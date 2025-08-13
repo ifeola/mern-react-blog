@@ -10,11 +10,11 @@ const NavBar = () => {
 	return (
 		<header
 			style={{ "--heading-height": "4rem" }}
-			className="fixed top-0 left-0 w-full h-[var(--heading-height)] md:h-[calc(var(--heading-height)*1.25)] flex items-center justify-center border-b border-b-gray-100">
+			className="fixed top-0 left-0 w-full h-[var(--heading-height)] md:h-[calc(var(--heading-height)*1.25)] flex items-center justify-center border-b border-b-gray-100 dark:border-b-gray-100/15 z-50 backdrop-blur-3xl">
 			<nav className="w-full max-w-[72rem] mx-auto flex items-center justify-between px-4 md:px-8">
-				<div className="flex items-center gap-2">
+				<div className="flex items-center gap-2 dark:text-white">
 					<img src={assets.logo} alt="Logo Image" />
-					<span>CrunchyBlog</span>
+					<span className="font-medium">CrunchyBlog</span>
 				</div>
 				<div
 					className={`absolute top-[var(--heading-height)] left-0 w-full p-4 bg-transparent backdrop-blur-sm md:hidden ${
@@ -62,12 +62,12 @@ const NavBar = () => {
 					</ul>
 					<div className="flex items-center gap-3">
 						<ButtonLink
-							style="bg-white border-gray-950 hover:bg-gray-200"
+							style="bg-transparent dark:hover:bg-gray-700 dark:border-gray-300 dark:text-gray-300 border-gray-950 hover:bg-gray-200"
 							path="login">
 							Login
 						</ButtonLink>
 						<ButtonLink
-							style="bg-gray-950 text-white border-gray-950 hover:bg-gray-800"
+							style="bg-gray-950 dark:bg-primary-green-400 dark:border-primary-green-400 dark:text-gray-900 text-white border-gray-950 hover:bg-gray-800 dark:hover:bg-primary-green dark:hover:border-primary-green"
 							path="signup">
 							Get Started
 						</ButtonLink>
