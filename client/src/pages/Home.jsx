@@ -1,3 +1,4 @@
+import BlogPostForm from "../components/BlogPostForm";
 import Hero from "../components/Hero";
 
 const Home = () => {

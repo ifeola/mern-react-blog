@@ -1,0 +1,29 @@
+{
+	"name": "mern-react-blog",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "nodemon ./server/server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ifeola/mern-react-blog.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "module",
+	"bugs": {
+		"url": "https://github.com/ifeola/mern-react-blog/issues"
+	},
+	"homepage": "https://github.com/ifeola/mern-react-blog#readme",
+	"dependencies": {
+		"dotenv": "^17.2.1",
+		"express": "^5.1.0",
+		"mongoose": "^8.17.1"
+	},
+	"devDependencies": {
+		"nodemon": "^3.1.10"
+	}
+}
