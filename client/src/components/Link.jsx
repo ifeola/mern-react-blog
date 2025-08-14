@@ -8,9 +8,9 @@ const Link = (props) => {
 				className={({ isActive }) =>
 					`${
 						isActive
-							? "bg-primary-green-400 md:bg-transparent text-white  md:dark:text-primary-green-400 md:text-primary-green-400"
+							? "bg-primary-green-600 md:bg-transparent text-text-dark  md:dark:text-primary-green-600 md:text-primary-green-600"
 							: "text-black"
-					} ${style} px-4 py-2 md:p-0 w-full inline-block rounded-md transition-colors md:hover:text-primary-green-400 md:hover:bg-transparent hover:bg-primary-green-400 hover:text-white dark:text-white dark:hover:text-primary-white`
+					} ${style} px-4 py-2 md:p-0 w-full inline-block rounded-md transition-colors md:hover:text-primary-green-600 md:hover:bg-transparent hover:bg-primary-green-600 hover:text-text-dark dark:text-text-dark dark:hover:text-primary-white`
 				}
 				to={path}>
 				{children}

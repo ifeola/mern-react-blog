@@ -24,9 +24,46 @@ html {
 }
 
 @theme {
-	--color-primary-green: #10f2c5;
-	--color-primary-green-400: #00b490;
+	/* Font */
 	--font-fira-mono: "Fira Mono", monospace;
+
+	/* Color Scheme */
+	--color-primary-green-50: oklch(0.983 0.043 168.35);
+	--color-primary-green-100: oklch(0.965 0.071 168.35);
+	--color-primary-green-200: oklch(0.928 0.128 168.35);
+	--color-primary-green-300: oklch(0.891 0.184 168.35);
+	--color-primary-green-400: oklch(0.854 0.241 168.35);
+	--color-primary-green-500: oklch(0.903 0.226 168.35);
+	--color-primary-green-600: oklch(0.771 0.178 168.35);
+	--color-primary-green-700: oklch(0.638 0.131 168.35);
+	--color-primary-green-800: oklch(0.506 0.084 168.35);
+	--color-primary-green-900: oklch(0.374 0.036 168.35);
+
+	/* Accent colors */
+	--color-accent-20050: #fef9e6;
+	--color-accent-100: #fef3cf;
+	--color-accent-200: #fde7a0;
+	--color-accent-300: #fcdb70;
+	--color-accent-400: #fbd040;
+	--color-accent-500: #f2c510;
+	--color-accent-600: #c29e0e;
+	--color-accent-700: #91770b;
+	--color-accent-800: #615007;
+	--color-accent-900: #302804;
+
+	/* Light Colors */
+	--color-bg-light: #ffffff;
+	--color-text-light: #1a1a1a;
+	--color-muted-light: #555555;
+	--color-border-light: #e5e5e5;
+	--color-card-bg-light: #fafafa;
+
+	/* Dark Mode Colors */
+	--color-bg-dark: #121212;
+	--color-text-dark: #eaeaea;
+	--color-muted-dark: #a0a0a0;
+	--color-border-dark: #2a2a2a;
+	--color-card-bg-dark: #1e1e1e;
 }
 
 @layer components {
@@ -42,8 +79,7 @@ html {
 	.nav-link::before {
 		content: "0" counter(item) ".";
 		margin-right: 0.4rem;
-		color: var(--color-primary-green-400);
+		color: var(--color-primary-green-600);
 		font-family: var(--font-fira-mono);
-		/* background-color: #00b490; */
 	}
 }

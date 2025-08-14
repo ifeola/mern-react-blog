@@ -33,7 +33,7 @@ const NavBar = () => {
 							Login
 						</ButtonLink>
 						<ButtonLink
-							style="bg-gray-950 text-white mt-2 hover:bg-gray-800 dark:bg-white dark:text-primary-green-400 dark:border-white"
+							style="bg-gray-950 text-white mt-2 hover:bg-gray-800 dark:bg-white dark:text-primary-green-600 dark:border-white"
 							path="signup">
 							Get started
 						</ButtonLink>
@@ -67,7 +67,7 @@ const NavBar = () => {
 							Login
 						</ButtonLink>
 						<ButtonLink
-							style="bg-gray-950 dark:bg-primary-green-400 dark:border-primary-green-400 dark:text-gray-900 text-white border-gray-950 hover:bg-gray-800 dark:hover:bg-primary-green dark:hover:border-primary-green md:text-sm"
+							style="bg-gray-950 dark:bg-primary-green-600 dark:border-primary-green-600 dark:text-gray-900 text-white border-gray-950 hover:bg-gray-800 dark:hover:bg-primary-green-500 dark:hover:border-primary-green-500 md:text-sm"
 							path="signup">
 							Get Started
 						</ButtonLink>
