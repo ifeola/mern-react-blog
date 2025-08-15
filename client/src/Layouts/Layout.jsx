@@ -1,6 +1,7 @@
 import { Outlet } from "react-router";
 import NavBar from "../components/NavBar";
 import ThemeToggle from "../components/ThemeToggle";
+import Footer from "../components/Footer";
 
 const Layout = () => {
 	return (
@@ -8,10 +9,13 @@ const Layout = () => {
 			<NavBar />
 			<ThemeToggle />
 			<main className="dark:bg-gray-900">
-				<div className="max-w-[72rem] mx-auto px-4 md:px-8">
+				<div>
 					<Outlet />
 				</div>
 			</main>
+			<footer className="newsletter mt-8 [--pattern-fg:_color-mix(in_oklab,_var(--color-black)_10%,_transparent)] dark:[--pattern-fg:_color-mix(in_oklab,_var(--color-white)_10%,_transparent)] border-t border-bg-dark/20 dark:border-bg-light/10">
+				<Footer />
+			</footer>
 		</div>
 	);
 };

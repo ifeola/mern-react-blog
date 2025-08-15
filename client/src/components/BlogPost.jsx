@@ -1,7 +1,15 @@
 import { Link } from "react-router";
 import { assets } from "../assets/assets";
 
-const BlogPost = () => {
+const BlogPost = ({
+	title,
+	content,
+	category,
+	publicationDate,
+	author,
+	image,
+	id,
+}) => {
 	function formatSmartDate(isoString) {
 		const date = new Date(isoString);
 		const now = new Date();
@@ -20,7 +28,8 @@ const BlogPost = () => {
 	return (
 		<Link
 			to="blog"
-			className="block p-4 border border-border-light/40 dark:border-border-dark/80 rounded-lg shadow-lg shadow-bg-dark/5">
+			key={id}
+			className="block p-4 border border-border-light/40 dark:border-border-light/10 rounded-lg hover:shadow-lg group hover:shadow-bg-dark/5 transition-all">
 			<div className="flex flex-col items-center gap-5">
 				<img
 					src={assets.blog_pic_4}
@@ -28,19 +37,19 @@ const BlogPost = () => {
 					className="rounded-md"
 				/>
 				<div>
-					<div className="text-sm flex items-center gap-4">
+					<div className="text-xs flex items-center gap-4">
 						<span className="capitalize px-2 py-1 text-accent-800 dark:text-accent-400 bg-accent-600/30 rounded-lg border border-accent-700/30 font-medium">
-							Future Tech
+							{category}
 						</span>
 						<span className="text-text-light/70 dark:text-text-dark/70 font-medium">
-							{formatSmartDate("2025-07-10T11:45:00Z")}
+							{formatSmartDate(publicationDate)}
 						</span>
 					</div>
-					<h4 className="text-lg text-text-light dark:text-text-dark font-medium my-2">
-						Quantum Computing: A Primer for the Modern Developer
+					<h4 className="text-lg text-text-light dark:text-text-dark font-medium mt-4 mb-2 group-hover:text-primary-green-700 transition-colors">
+						{title}
 					</h4>
-					<p className="text-text-light/70 dark:text-text-dark/70 text-base">
-						Quantum computing has been a buzzword in the tech industry for years
+					<p className="text-text-light/70 dark:text-text-dark/70 text-base line-clamp-3">
+						{content}
 					</p>
 				</div>
 			</div>

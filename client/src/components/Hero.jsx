@@ -3,13 +3,13 @@ import SubTitle from "./SubTitle";
 
 const Hero = () => {
 	return (
-		<section className="w-full max-w-[40rem] min-h-dvh flex items-center justify-center">
-			<div>
-				<SubTitle>Blog</SubTitle>
-				<h1 className="font-bold text-4xl md:text-6xl text-wrap mb-4 dark:text-white">
+		<section className="min-h-dvh flex items-center justify-center">
+			<div className="w-full">
+				<SubTitle style="mb-4 text-sm">Blog</SubTitle>
+				<h1 className="font-bold text-4xl md:text-6xl text-wrap mb-4 dark:text-white max-w-[40rem]">
 					Your Voice. Your Story. Your Space.
 				</h1>
-				<p className="text-base md:text-lg text-gray-600 text-pretty mb-8 dark:text-gray-300">
+				<p className="text-base md:text-lg text-gray-600 text-pretty mb-8 dark:text-gray-300 max-w-[40rem]">
 					Share your thoughts, ideas, and passions with the world. Discover
 					inspiring stories, connect with like-minded people, and build your own
 					corner of the internet — one post at a time.

@@ -67,6 +67,16 @@ html {
 }
 
 @layer components {
+	section,
+	footer {
+		@apply px-4 md:px-16;
+	}
+
+	section > div,
+	footer > div {
+		@apply max-w-[72rem] mx-auto;
+	}
+
 	li:has(.nav-link) {
 		counter-increment: item 1;
 	}
@@ -81,5 +91,17 @@ html {
 		margin-right: 0.4rem;
 		color: var(--color-primary-green-600);
 		font-family: var(--font-fira-mono);
+	}
+
+	.newsletter {
+		background-image: repeating-linear-gradient(
+			315deg,
+			var(--pattern-fg) 0,
+			var(--pattern-fg) 1px,
+			transparent 0,
+			transparent 50%
+		);
+		background-size: 10px 10px;
+		background-attachment: fixed;
 	}
 }

@@ -37,12 +37,12 @@ export default function ThemeToggle() {
 	}, [theme]);
 
 	return (
-		<div className="flex z-200 fixed bottom-6 right-6 bg-gray-950/5 dark:bg-gray-100/10 p-1.5 rounded-4xl">
+		<div className="flex z-200 fixed bottom-6 right-6 bg-gray-950/5 dark:bg-gray-100/10 p-1.5 rounded-4xl backdrop-blur-sm">
 			<button
 				onClick={() => setTheme("system")}
 				className={`p-1.5 size-7 rounded-full dark:text-white border cursor-pointer ${
 					theme === "system"
-						? "text-gray-950 dark:border-gray-500/20 dark:bg-gray-100/10 dark:text-white border-gray-300 shadow-md shadow-gray-950/10"
+						? "text-gray-950 dark:border-gray-500/20 dark:bg-gray-100/10 dark:text-white border-gray-300/30 shadow-md shadow-gray-950/10"
 						: "border-transparent"
 				}`}>
 				<Desktop />
@@ -51,7 +51,7 @@ export default function ThemeToggle() {
 				onClick={() => setTheme("light")}
 				className={`p-1.5 size-7 rounded-full dark:text-white border cursor-pointer ${
 					theme === "light"
-						? "text-gray-950 dark:border-gray-500/20 dark:bg-gray-100/10 dark:text-white border-gray-300 shadow-md shadow-gray-950/10"
+						? "text-gray-950 dark:border-gray-500/20 dark:bg-gray-100/10 dark:text-white border-gray-300/30 shadow-md shadow-gray-950/10"
 						: "border-transparent"
 				}`}>
 				<Light />
@@ -60,7 +60,7 @@ export default function ThemeToggle() {
 				onClick={() => setTheme("dark")}
 				className={`p-1.5 size-7 rounded-full dark:text-white border cursor-pointer ${
 					theme === "dark"
-						? "text-gray-950 dark:border-gray-500/20 dark:bg-gray-100/10 dark:text-white border-gray-300 shadow-md shadow-gray-950/10"
+						? "text-gray-950 dark:border-gray-500/20 dark:bg-gray-100/10 dark:text-white border-gray-300/30 shadow-md shadow-gray-950/10"
 						: "border-transparent"
 				}`}>
 				<Dark />
