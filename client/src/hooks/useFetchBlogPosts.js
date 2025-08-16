@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function useFetchBlogPost(URL = 0) {
+function useFetchBlogPost(URL) {
 	const [data, setData] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);

@@ -37,7 +37,7 @@ export default function ThemeToggle() {
 	}, [theme]);
 
 	return (
-		<div className="flex z-200 fixed bottom-6 right-6 bg-gray-950/5 dark:bg-gray-100/10 p-1.5 rounded-4xl backdrop-blur-sm">
+		<div className="flex z-200 fixed bottom-6 right-6 md:bottom-16 md:right-16 bg-gray-950/5 dark:bg-gray-100/10 p-1.5 rounded-4xl backdrop-blur-sm">
 			<button
 				onClick={() => setTheme("system")}
 				className={`p-1.5 size-7 rounded-full dark:text-white border cursor-pointer ${

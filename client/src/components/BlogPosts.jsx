@@ -36,7 +36,7 @@ const BlogPosts = (props) => {
 					{loading ? (
 						<h1>Loading</h1>
 					) : (
-						<ul className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(min(320px,100%),1fr))]">
+						<ul className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(min(400px,100%),1fr))]">
 							{data
 								.slice(0, newLimit)
 								.map(
@@ -48,6 +48,7 @@ const BlogPosts = (props) => {
 											publicationDate,
 											author,
 											featuredImage,
+											postId,
 										},
 										id
 									) => {
@@ -60,6 +61,7 @@ const BlogPosts = (props) => {
 												author={author}
 												image={featuredImage}
 												id={id}
+												postId={postId}
 											/>
 										);
 									}

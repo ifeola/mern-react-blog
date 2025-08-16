@@ -7,7 +7,7 @@ const BlogPost = ({
 	category,
 	publicationDate,
 	author,
-	image,
+	postId,
 	id,
 }) => {
 	function formatSmartDate(isoString) {
@@ -27,14 +27,14 @@ const BlogPost = ({
 
 	return (
 		<Link
-			to="blog"
+			to={`/blogs/${postId}`}
 			key={id}
-			className="block p-4 border border-border-light/40 dark:border-border-light/10 rounded-lg hover:shadow-lg group hover:shadow-bg-dark/5 transition-all">
-			<div className="flex flex-col items-center gap-5">
+			className="block p-4 border border-border-light/40 dark:border-border-light/10 rounded-lg transition-all group">
+			<div className="flex flex-col items-center gap-4">
 				<img
 					src={assets.blog_pic_4}
 					alt="blog post image"
-					className="rounded-md"
+					className="rounded-sm group-hover:shadow-lg group-hover:shadow-bg-dark/5 transition-shadow"
 				/>
 				<div>
 					<div className="text-xs flex items-center gap-4">
