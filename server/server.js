@@ -1,12 +1,21 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
+import path from "path";
+import { fileURLToPath } from "url";
 
 dotenv.config();
 const PORT = process.env.PORT || 3000;
 const app = express();
 app.use(express.json()); // This will allow us to pass incoming requests with json payloads
 app.use(cors());
+
+// Needed for __dirname in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Serve React frontend
+app.use(express.static(path.join(__dirname, "../client/dist")));
 
 const getBlogPosts = async () => {
 	const data = await import("./data.json", {
@@ -75,6 +84,10 @@ app.get("/api/blogs/:blogId", async (request, response) => {
 		console.error("Failed to load blog:", error);
 		return response.status(500).json({ message: error.message });
 	}
+});
+
+app.get(/^\/(?!api).*/, (req, res) => {
+	res.sendFile(path.join(__dirname, "../client/dist/index.html"));
 });
 
 app.listen(PORT, () => {

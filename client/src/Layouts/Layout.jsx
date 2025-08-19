@@ -2,11 +2,16 @@ import { Outlet } from "react-router";
 import NavBar from "../components/NavBar";
 import ThemeToggle from "../components/ThemeToggle";
 import Footer from "../components/Footer";
+import Login from "../pages/Login";
+import { useState } from "react";
 
 const Layout = () => {
+	const [showElement, setShowElement] = useState(false);
+
 	return (
 		<div className="w-full">
-			<NavBar />
+			<NavBar setShowElement={setShowElement} />
+			{showElement && <Login setShowElement={setShowElement} />}
 			<ThemeToggle />
 			<main className="dark:bg-gray-900">
 				<div>

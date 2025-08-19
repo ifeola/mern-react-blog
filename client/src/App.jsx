@@ -4,6 +4,7 @@ import Layout from "./Layouts/Layout";
 import Popular from "./pages/Popular";
 import Trending from "./pages/Trending";
 import Blog from "./pages/Blog";
+import Login from "./pages/Login";
 
 const App = () => {
 	return (
@@ -12,7 +13,7 @@ const App = () => {
 				<Route index element={<Home />} />
 				<Route path="popular" element={<Popular />} />
 				<Route path="trending" element={<Trending />} />
-				<Route path="/blogs/:id" element={<Blog />} />
+				<Route path="blogs/:id" element={<Blog />} />
 			</Route>
 		</Routes>
 	);
