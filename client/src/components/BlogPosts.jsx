@@ -8,7 +8,15 @@ const BlogPosts = (props) => {
 		props;
 	const [data, loading, error] = useFetchBlogPost(URL);
 	const newLimit = limit >= data.length || limit == 0 ? data.length : limit;
-	console.log(newLimit);
+
+	const colors = [
+		"oklch(0.903 0.226 168.35)", // Base Aqua
+		"oklch(0.89 0.20 210)", // Analogous Blue
+		"oklch(0.90 0.21 140)", // Analogous Green
+		"oklch(0.88 0.21 10)", // Complementary Coral
+		"oklch(0.95 0.04 90)", // Neutral Sand
+		"oklch(0.95 0.05 250)", // Deep Navy
+	];
 
 	return (
 		<section className="py-24">
@@ -36,7 +44,7 @@ const BlogPosts = (props) => {
 					{loading ? (
 						<h1>Loading</h1>
 					) : (
-						<ul className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(min(400px,100%),1fr))]">
+						<ul className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(min(320px,100%),1fr))]">
 							{data
 								.slice(0, newLimit)
 								.map(
@@ -52,8 +60,14 @@ const BlogPosts = (props) => {
 										},
 										id
 									) => {
+										const bg = colors[id % colors.length]; // cycle colors
+										const isLight = id % colors.length === 4; // sand is light → black text
 										return (
 											<BlogPost
+												style={{
+													backgroundColor: `${bg}`,
+													color: `${isLight}` ? "black" : "white",
+												}}
 												title={title}
 												content={content}
 												category={category}

@@ -104,4 +104,8 @@ html {
 		background-size: 10px 10px;
 		background-attachment: fixed;
 	}
+
+	.card-shadow {
+		box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 1);
+	}
 }

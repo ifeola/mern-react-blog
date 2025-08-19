@@ -3,25 +3,29 @@ import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-/**
- * MarkdownRenderer
- * Renders Markdown -> HTML with nice typography and code highlighting.
- *
- * Props:
- *  - content: string (Markdown source)
- */
 export default function MarkdownRenderer({ content }) {
 	return (
 		<article className="prose prose-gray dark:prose-invert max-w-none">
 			<ReactMarkdown
 				remarkPlugins={[remarkGfm]}
-				// react-markdown escapes raw HTML by default (safer). If you need to allow raw HTML,
-				// also add `rehypeRaw` and a sanitizer like `rehype-sanitize`.
 				components={{
 					// Open external links in a new tab
 					a({ node, ...props }) {
 						return <a {...props} target="_blank" rel="noopener noreferrer" />;
 					},
+					p: ({ node, ...props }) => (
+						<p style={{ marginBottom: "16px" }} {...props} />
+					),
+					h2: ({ node, ...props }) => (
+						<h2 className="font-bold text-xl mt-4 mb-1" {...props} />
+					),
+					ul: ({ node, ...props }) => <ul className="custom-list" {...props} />,
+					ol: ({ node, ...props }) => (
+						<ol className="custom-ordered-list" {...props} />
+					),
+					li: ({ node, ...props }) => (
+						<li className="list-disc ml-6" {...props} />
+					),
 					// Code blocks with syntax highlighting
 					code({ className, children, ...props }) {
 						const match = /language-(\w+)/.exec(className || "");
@@ -57,18 +61,3 @@ export default function MarkdownRenderer({ content }) {
 		</article>
 	);
 }
-
-/*
-USAGE EXAMPLE
-
-import MarkdownRenderer from "./MarkdownRenderer";
-
-export default function BlogPost({ post }) {
-  return (
-    <div className="px-6 py-8">
-      <h1 className="text-3xl md:text-4xl font-bold mb-4">{post.title}</h1>
-      <MarkdownRenderer content={post.content} />
-    </div>
-  );
-}
-*/

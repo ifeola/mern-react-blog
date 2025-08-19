@@ -1,5 +1,6 @@
 import BlogPosts from "../components/BlogPosts";
 import Hero from "../components/Hero";
+import Latest from "../components/Latest";
 import Newsletter from "../components/Newsletter";
 
 const Home = () => {
@@ -11,6 +12,15 @@ const Home = () => {
 				showButton={false}
 				URL="http://localhost:3000/api/blogs/"
 				limit={6}
+			/>
+			<Latest
+				subtitle="Latest blog posts"
+				path="popular"
+				showButton={true}
+				URL="http://localhost:3000/api/blogs"
+				limit={9}
+				showDesc={true}
+				description="Discover the most popular posts from our blog community! Explore the insights, tips, and stories that have captured the most attention—find out what’s making waves right now!"
 			/>
 			<Newsletter />
 			<BlogPosts

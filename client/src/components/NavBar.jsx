@@ -10,11 +10,13 @@ const NavBar = () => {
 	return (
 		<header
 			style={{ "--heading-height": "4rem" }}
-			className="fixed top-0 left-0 w-full h-[var(--heading-height)] md:h-[calc(var(--heading-height)*1.25)] flex items-center justify-center border-b border-b-gray-100 dark:border-b-gray-100/15 z-50 backdrop-blur-3xl bg-white/80 dark:bg-bg-dark/10">
+			className="fixed top-0 left-0 w-full h-[var(--heading-height)] md:h-[calc(var(--heading-height)*1.25)] flex items-center justify-center border-b border-b-gray-100/40 dark:border-b-gray-100/15 z-50 bg-primary-green-50 dark:bg-bg-dark/10">
 			<nav className="w-full max-w-[72rem] mx-auto flex items-center justify-between px-4 md:px-8">
 				<div className="flex items-center gap-2 dark:text-white">
 					<img src={assets.logo} alt="Logo Image" />
-					<span className="font-medium text-xl">CrunchyBlog</span>
+					<span className="font-bold text-xl">
+						Crunchy<span className="text-primary-green-600">Blog</span>
+					</span>
 				</div>
 				<div
 					className={`absolute top-[var(--heading-height)] left-0 w-full p-4 bg-transparent backdrop-blur-sm md:hidden ${
