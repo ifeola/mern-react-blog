@@ -1,6 +1,7 @@
 import useFetchBlogPost from "../hooks/useFetchBlogPosts";
 import BlogPost from "./BlogPost";
 import ButtonLink from "./ButtonLink";
+import IsLoading from "./IsLoading";
 import SubTitle from "./SubTitle";
 
 const BlogPosts = (props) => {
@@ -42,7 +43,7 @@ const BlogPosts = (props) => {
 				</div>
 				<div>
 					{loading ? (
-						<h1>Loading</h1>
+						<IsLoading />
 					) : (
 						<ul className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(min(320px,100%),1fr))]">
 							{data

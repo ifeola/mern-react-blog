@@ -7,8 +7,8 @@ function useFetchBlogPost(URL) {
 
 	useEffect(() => {
 		const fetchData = async () => {
+			setLoading(true);
 			try {
-				setLoading(true);
 				const response = await fetch(URL);
 				if (!response.ok) {
 					throw new Error("Failed to fetch data");

@@ -31,7 +31,7 @@ const BlogPost = ({
 			to={`/blogs/${postId}`}
 			key={id}
 			style={style}
-			className="block p-4 pb-6 border-4 border-border-dark dark:border-border-light/10 rounded-lg transition-all group hover:shadow-[4px_4px_0_0_#2a2a2a] dark:hover:shadow-[4px_4px_0_0_rgba(110,_110,_110,_1)]">
+			className="block p-2 md:p-4 pb-6 border-4 border-border-dark dark:border-border-light/10 rounded-lg transition-all group hover:shadow-[4px_4px_0_0_#2a2a2a] dark:hover:shadow-[4px_4px_0_0_rgba(110,_110,_110,_1)]">
 			<div className="flex flex-col items-center gap-4">
 				<img
 					src={assets.blog_pic_4}

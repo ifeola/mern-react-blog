@@ -4,13 +4,14 @@ import MarkdownRenderer from "../components/MarkdownRenderer";
 import BlogPosts from "../components/BlogPosts";
 import { assets } from "../assets/assets";
 import { Facebook, LinkedIn, LinkIcon, Twitter } from "../components/icons";
+import BlogDetailsLoading from "../components/BlogDetailsLoading";
 
 const Blog = () => {
 	const { id } = useParams();
 
 	const [data, loading, error] = useFetchBlogPost(`/api/blogs/${id}`);
 
-	if (loading) return <div>Loading...</div>;
+	if (loading) return <BlogDetailsLoading />;
 	if (error) return <div>Error: {error.message || "Failed to load data"}</div>;
 	if (!data) return <div>Blog not found.</div>;
 
@@ -38,24 +39,24 @@ const Blog = () => {
 							{data.title}
 						</h2>
 						<div className="flex items-center flex-wrap gap-2.5 mt-4">
-							<span className="block text-xs font-medium text-gray-300">
+							<span className="block text-xs font-medium text-gray-500 dark:text-gray-300">
 								{data.engagement.viewCount === 0
 									? 0
 									: data.engagement.viewCount}
 								<span className="ml-1">views</span>
 							</span>
 							<div className="w-1 h-1 bg-gray-300 rounded-full" />
-							<span className="block text-xs font-medium text-gray-300">
+							<span className="block text-xs font-medium text-gray-500 dark:text-gray-300">
 								{data.engagement.likes === 0 ? 0 : data.engagement.likes}
 								<span className="ml-1">likes</span>
 							</span>
 							<div className="w-1 h-1 bg-gray-300 rounded-full" />
-							<span className="block text-xs font-medium text-gray-300">
+							<span className="block text-xs font-medium text-gray-500 dark:text-gray-300">
 								{data.engagement.shares === 0 ? 0 : data.engagement.shares}
 								<span className="ml-1">shares</span>
 							</span>
 							<div className="w-1 h-1 bg-gray-300 rounded-full" />
-							<span className="block text-xs font-medium text-gray-300">
+							<span className="block text-xs font-medium text-gray-500 dark:text-gray-300">
 								{data.engagement.commentCount === 0
 									? 0
 									: data.engagement.commentCount}
@@ -146,7 +147,7 @@ const Blog = () => {
 						<ul className="flex items-center flex-wrap gap-2">
 							{data.tags.map((tag) => {
 								return (
-									<li className="py-1.5 px-3 bg-gray-200/10 backdrop-blur-sm text-xs rounded-xs">
+									<li className="py-1.5 px-3 bg-gray-200/20 border border-gray-300 backdrop-blur-sm text-xs rounded-sm">
 										{tag}
 									</li>
 								);

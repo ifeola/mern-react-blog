@@ -31,7 +31,7 @@ const NavBar = ({ setShowElement }) => {
 					<div className="h-[1px] w-full bg-gray-200/20" />
 					<div className="flex flex-col mt-4">
 						<Button
-							style="text-text-light dark:text-text-dark border-2 dark:border-border-light border-border-dark hover:bg-primary-green-600/20 transition-colors w-full"
+							style="text-text-dark border-2 border-border-light/60 hover:bg-primary-green-600/20 transition-colors w-full"
 							setShowElement={setShowElement}>
 							Login
 						</Button>
