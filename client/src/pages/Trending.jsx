@@ -6,7 +6,7 @@ const Trending = () => {
 			<BlogPosts
 				subtitle="Trending blog posts"
 				showButton={true}
-				URL="http://localhost:3000/api/blogs/trending"
+				URL="/api/blogs/trending"
 				limit={0}
 				showDesc={true}
 				description="Stay ahead with the latest buzz! These articles reflect current interests, hot discussions, and fresh perspectives—find out what’s making headlines in our community today!"

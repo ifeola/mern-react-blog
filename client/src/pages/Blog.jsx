@@ -8,9 +8,7 @@ import { Facebook, LinkedIn, LinkIcon, Twitter } from "../components/icons";
 const Blog = () => {
 	const { id } = useParams();
 
-	const [data, loading, error] = useFetchBlogPost(
-		`http://localhost:3000/api/blogs/${id}`
-	);
+	const [data, loading, error] = useFetchBlogPost(`/api/blogs/${id}`);
 
 	if (loading) return <div>Loading...</div>;
 	if (error) return <div>Error: {error.message || "Failed to load data"}</div>;

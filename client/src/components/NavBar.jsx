@@ -20,7 +20,7 @@ const NavBar = ({ setShowElement }) => {
 					</span>
 				</div>
 				<div
-					className={`fixed top-[var(--heading-height)] left-0 right-0 w-full p-4 bg-transparent backdrop-blur-sm md:hidden ${
+					className={`fixed top-[var(--heading-height)] left-0 right-0 w-full p-4 bg-gray-900 backdrop-blur-sm md:hidden ${
 						display ? "hidden" : "block"
 					}`}>
 					<ul className="mb-4 w-full">

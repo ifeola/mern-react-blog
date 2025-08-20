@@ -10,14 +10,14 @@ const Home = () => {
 			<BlogPosts
 				subtitle="Featured blog posts"
 				showButton={false}
-				URL="http://localhost:3000/api/blogs/"
+				URL="/api/blogs/"
 				limit={6}
 			/>
 			<Latest
 				subtitle="Latest blog posts"
 				path="popular"
 				showButton={true}
-				URL="http://localhost:3000/api/blogs"
+				URL="/api/blogs"
 				limit={9}
 				showDesc={true}
 				description="Discover the most popular posts from our blog community! Explore the insights, tips, and stories that have captured the most attention—find out what’s making waves right now!"
@@ -27,7 +27,7 @@ const Home = () => {
 				subtitle="Popular blog posts"
 				path="popular"
 				showButton={true}
-				URL="http://localhost:3000/api/blogs/popular"
+				URL="/api/blogs/popular"
 				limit={9}
 				showDesc={true}
 				description="Discover the most popular posts from our blog community! Explore the insights, tips, and stories that have captured the most attention—find out what’s making waves right now!"
@@ -36,7 +36,7 @@ const Home = () => {
 				subtitle="Trending blog posts"
 				path="trending"
 				showButton={true}
-				URL="http://localhost:3000/api/blogs/trending"
+				URL="/api/blogs/trending"
 				limit={9}
 				showDesc={true}
 				description="Stay ahead with the latest buzz! These articles reflect current interests, hot discussions, and fresh perspectives—find out what’s making headlines in our community today!"

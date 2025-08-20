@@ -11,4 +11,9 @@ export default defineConfig({
 			plugins: [typography()],
 		}),
 	],
+	server: {
+		proxy: {
+			"/api": "http://localhost:3000",
+		},
+	},
 });

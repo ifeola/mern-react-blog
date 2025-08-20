@@ -6,7 +6,7 @@ const Popular = () => {
 			<BlogPosts
 				subtitle="Popular blog posts"
 				showButton={true}
-				URL="http://localhost:3000/api/blogs/popular"
+				URL="/api/blogs/popular"
 				limit={0}
 				showDesc={true}
 				description="Discover the most popular posts from our blog community! Explore the insights, tips, and stories that have captured the most attention—find out what’s making waves right now!"

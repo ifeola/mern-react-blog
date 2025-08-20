@@ -28,7 +28,7 @@ const LatestPost = ({
 	return (
 		<Link
 			to={`/blogs/${data.postId}`}
-			className={`block p-4 border-4 border-border-dark dark:border-border-light/10 rounded-lg transition-all bg-[#${bgColor}] group hover:shadow-[4px_4px_0_0_#2a2a2a] dark:hover:shadow-[4px_4px_0_0_rgba(110,_110,_110,_1)] ${style}`}>
+			className={`block p-1.5 border-4 border-border-dark dark:border-border-light/10 rounded-lg transition-all group hover:shadow-[4px_4px_0_0_#2a2a2a] dark:hover:shadow-[4px_4px_0_0_rgba(110,_110,_110,_1)] ${style}`}>
 			<div className="relative flex flex-col items-center gap-4 overflow-hidden">
 				<img
 					src={assets.blog_pic_4}
@@ -49,11 +49,11 @@ const LatestPost = ({
 							</span>
 						)}
 					</div>
-					<h4 className="text-lg text-text-dark font-medium mt-4 group-hover:text-primary-green-700 transition-colors">
+					<h4 className="text-base md:text-lg text-text-dark font-medium mt-4 group-hover:text-primary-green-700 transition-colors">
 						{data.title}
 					</h4>
 					{showContent && (
-						<p className="text-text-dark/70 text-base line-clamp-2 text-pretty mt-2">
+						<p className="text-text-dark/70 md:text-base text-sm line-clamp-2 text-pretty mt-2">
 							{data.content}
 						</p>
 					)}
